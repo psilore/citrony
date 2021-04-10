@@ -10,7 +10,9 @@ const axiosAPI = axios.create({
 const apiRequest = (method, url, request) => {
     const headers = {
         authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjE3IiwiYXBwTmFtZSI6ImIxZGZmNDdlLTk4NWMtMTFlYi1hOGIzLTAyNDJhYzEzMDAwMyJ9.8kp2Mq7rvT7BkCjT0sKE15iL6N7cRtlBoffYZalverM",
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        withCredentials: true,
+        crossorigin: true
     };
     //using the axios instance to perform the request that received from each http method
     return axiosAPI({
